@@ -11,7 +11,7 @@ def test_home_page():
     
     # page load check
     # if website was loaded, test will be passed.
-    assert "log in or sign up" in website.title
+    assert "Facebook" in website.title
     
     website.close()
 
