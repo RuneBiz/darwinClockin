@@ -10,7 +10,7 @@ During development cycles, **manual tests** are frequently repeated for various 
 
 >Executing repetitive tasks with automated software testing gives your team time to spend on more challenging and rewarding projects.
 
-### Sample Test Case
+## Sample Test Case
 In sample_test_case.py,
 
 >Function test_home_page(): will check the home page. 
@@ -20,7 +20,7 @@ To determine if the home page loading was successful, this first test will be pa
 If the login process fails as expected, this second test will be passed.
 
 
-### Running Selenium Test Case on local
+## Running Selenium Test Case on local
 Pre-requisites:
 * Chrome browser installed.
 * Python 3.10 installed.
@@ -52,7 +52,7 @@ Pre-requisites:
 	                                                [100%]
 	=========================================== 2 passed in 21.06s ==================================
 	````
-### Running Selenium Test Case with Github Action
+## Running Selenium Test Case with Github Action
 In .github/workflows/runpytest.yml:
 * This pipeline will run only on manual trigger. If you want to change trigger type, please see this documentation: https://docs.github.com/en/actions/using-workflows/triggering-a-workflow	
 	````yaml
