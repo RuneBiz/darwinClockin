@@ -16,7 +16,7 @@ def test_home_page():
     website.close()
 
 
-def test_login_fail_with_fake_credentials():
+def test_login_fail_with_wrong_credentials():
     website = webdriver.Chrome()
     website.get("https://www.facebook.com/")
 
