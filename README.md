@@ -13,11 +13,9 @@ During development cycles, **manual tests** are frequently repeated for various 
 ## Sample Test Case
 In sample_test_case.py,
 
->Function test_home_page(): will check the home page. 
-To determine if the home page loading was successful, this first test will be passed.
+>Function test_home_page(): will check the home page. If the home page loading was successful, this first test will be passed.
 
->Function test_login_fail_with_wrong_credentials(): to verify if the login fails when using wrong credentials, we will attempt to log in with incorrect information.
-If the login process fails as expected, this second test will be passed.
+>Function test_login_fail_with_wrong_credentials(): to verify that the login fail or not when we attempt to login using wrong credentials. If the login process fails as expected, this second test will be passed.
 
 
 ## Running Selenium Test Case on local
