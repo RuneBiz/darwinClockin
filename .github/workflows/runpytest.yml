@@ -34,6 +34,9 @@ jobs:
         pip install -r requirements.txt
         
     - name: Test with pytest
+      env:
+          MY_USERNAME: ${{ secrets.MY_USER_NAME }}
+          MY_PASSWORD: ${{ secrets.MY_PASSWORD }}
       run: |
         pytest sample_test_case.py --doctest-modules --junitxml=test-results.xml
         
