@@ -11,11 +11,11 @@ def test_login_fail_with_wrong_credentials():
     time.sleep(2)
     # add wrong username
     website_login_email = website.find_element('id', "Username")
-    website_login_email.send_keys("rballesta")
+    website_login_email.send_keys(${{ secrets.MY_PASSWORD }})
         
     # add wrong password
     website_login_password = website.find_element('id', "Password")
-    website_login_password.send_keys("enurFrost**1")
+    website_login_password.send_keys(${{ secrets.MY_USER_NAME }})
     
     # login with fake credentials
     website_login_button = website.find_element('id', "showCount")
