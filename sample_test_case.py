@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 import pytest
 import time
+import os
 
 def test_login_fail_with_wrong_credentials():
 
