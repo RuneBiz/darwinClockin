@@ -28,8 +28,8 @@ def darwin_login_scheduled():
         skip.click()
     
     # clockin
-    clockin_btn = website.find_element_by_id('attendance-logger-widget')
-    clockin_btn.clear()
+    clockin_btn = website.find_element(By.ID, 'attendance-logger-widget')
+    clockin_btn.click()
     time.sleep(2)
     
     #Signout
