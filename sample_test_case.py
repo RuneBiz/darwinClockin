@@ -21,7 +21,7 @@ def test_login_fail_with_wrong_credentials():
     
     sign_in_btn = website.find_element(By.ID, 'login-submit')
     sign_in_btn.click()
-    time.sleep(2)
+    time.sleep(5)
     
     skip = website.find_element(By.CLASS_NAME, 'skip_pulse')
     if skip.text != "":
