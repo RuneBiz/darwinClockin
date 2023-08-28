@@ -5,7 +5,7 @@ import pytest
 import time
 import os
 
-def darwin_login_scheduled():
+def test_login_fail_with_wrong_credentials():
 
     MY_USERNAME = os.environ["MY_USERNAME"]
     MY_PASSWORD = os.environ["MY_PASSWORD"]
