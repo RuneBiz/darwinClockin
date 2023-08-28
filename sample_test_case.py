@@ -11,7 +11,7 @@ def test_login_fail_with_wrong_credentials():
     MY_PASSWORD = os.environ["MY_PASSWORD"]
     
     website = webdriver.Chrome()
-    website.get("https://cos.darwinbox.com")
+    website.get("https://cos.darwinbox.com/user/login")
     
     time.sleep(2)
     username_field = website.find_element(By.ID, 'UserLogin_username')
@@ -19,7 +19,8 @@ def test_login_fail_with_wrong_credentials():
     password_field = website.find_element(By.ID, 'UserLogin_password')
     password_field.send_keys(MY_PASSWORD)
     
-    password_field.send_keys(Keys.RETURN)
+    sign_in_btn = website.find_element(By.ID, 'login-submit')
+    sign_in_btn.click()
     time.sleep(2)
     
     skip = website.find_element(By.CLASS_NAME, 'skip_pulse')
