@@ -29,6 +29,9 @@ def test_login_fail_with_wrong_credentials():
     
     # clockin
     clockin_btn = website.find_element(By.ID, 'attendance-logger-widget')
+    clockin_btn.clear()
+
+    clockin_btn = website.find_element(By.ID, 'attendance-logger-widget')
     clockin_btn.click()
     time.sleep(2)
     
