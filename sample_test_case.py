@@ -28,8 +28,8 @@ def test_login_fail_with_wrong_credentials():
         skip.click()
     
     # clockin
-    clockin_btn = website.find_element(By.ID, 'attendance-logger-widget')
-    clockin_btn.clear()
+    js_string = "var element = document.getElementById('attendance-logger-widget');element.remove();"
+    website.execute_script(js_string)
 
     clockin_btn = website.find_element(By.ID, 'attendance-logger-widget')
     clockin_btn.click()
