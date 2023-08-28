@@ -11,21 +11,33 @@ def test_login_fail_with_wrong_credentials():
     MY_PASSWORD = os.environ["MY_PASSWORD"]
     
     website = webdriver.Chrome()
-    website.get("https://connectosclockin.hrhub.ph/WebBundy")
+    website.get("https://cos.darwinbox.com/user/login")
+    
+    # Login Page
+    time.sleep(2)
+    darwin = website.find_element(By.ID, 'UserLogin_username')
+    darwin.send_keys(MY_USERNAME)
+    
+    darwin = website.find_element(By.ID, 'UserLogin_password')
+    darwin.send_keys(MY_PASSWORD)
+    
+    darwin_sign_in = website.find_element(By.ID, "login-submit")
+    darwin_sign_in.click()
     
     time.sleep(2)
-    # add wrong username
-    website_login_email = website.find_element(By.ID, "Username")
-    website_login_email.send_keys(MY_USERNAME)
-        
-    # add wrong password
-    website_login_password = website.find_element(By.ID, "Password")
-    website_login_password.send_keys(MY_PASSWORD)
     
-    # login with fake credentials
-    website_login_button = website.find_element(By.ID, "showCount")
-    website_login_button.click()
+    skip = website.find_element(By.CLASS_NAME, 'skip_pulse')
+        if skip.text != "":
+        skip.click()
     
-    time.sleep(10)
+    # clockin
+    clockin_btn = website.find_element_by_id('attendance-logger-widget')
+    clockin_btn.click()
+    time.sleep(2)
     
-    website.close()
+    #Signout
+    website.get("https://cos.darwinbox.com/user/logout")
+    time.sleep(1)
+    
+    #Close Chrome
+    website.quit()
