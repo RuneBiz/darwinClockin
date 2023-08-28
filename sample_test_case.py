@@ -27,7 +27,7 @@ def test_login_fail_with_wrong_credentials():
     time.sleep(2)
     
     skip = website.find_element(By.CLASS_NAME, 'skip_pulse')
-        if skip.text != "":
+    if skip.text != "":
         skip.click()
     
     # clockin
