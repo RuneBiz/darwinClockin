@@ -34,7 +34,7 @@ def test_login_fail_with_wrong_credentials():
     time.sleep(2)
     
     #Signout
-    driver.get('https://cos.darwinbox.com' + "/user/logout")
+    website.get('https://cos.darwinbox.com' + "/user/logout")
     time.sleep(1)
     
     #Close Chrome
