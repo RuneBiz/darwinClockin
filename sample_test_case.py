@@ -38,6 +38,4 @@ def test_login_fail_with_wrong_credentials():
     time.sleep(1)
     
     #Close Chrome
-    driver.quit()
-    
-    print('berhasil yes') 
+    website.quit()
