@@ -5,7 +5,7 @@ name: Run Pytest
 
 on:
  schedule:
-   - cron: "0 21 * * 1-5"
+   - cron: "0 21 * 1-12 1-5"
 
 permissions:
   checks: write
