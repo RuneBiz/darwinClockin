@@ -3,9 +3,12 @@
 
 name: Run Pytest
 
+# on:
+#  schedule:
+#    - cron: "0 21 * 1-12 1-5"
+
 on:
- schedule:
-   - cron: "0 21 * 1-12 1-5"
+  workflow_dispatch
 
 permissions:
   checks: write
