@@ -11,8 +11,8 @@ env:
 #    - cron: "0 21 * 1-12 1-5"
 
 on:
-  workflow_dispatch:
-    types: [run-ping]
+  repository_dispatch:
+    types: do-something
 
 permissions:
   checks: write
