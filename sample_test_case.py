@@ -29,8 +29,6 @@ def test_login_fail_with_wrong_credentials():
     
     # clockin
     shadow_host = driver.find_element(By.ID, 'dbox-top-bar')
-    clockin_btn = get_shadow_root(shadow_host).find_element(By.CSS_SELECTOR, 'clockinout_btn')
-    clockin_btn.click()
     
     time.sleep(2)
     
