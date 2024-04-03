@@ -28,11 +28,12 @@ def test_login_fail_with_wrong_credentials():
         skip.click()
     
     # clockin
-    shadow_host = website.find_element(By.ID, 'dbox-top-bar').shadow_root
-    clockin_btn = shadow_host.find_element(By.CSS_SELECTOR, "[class='clockinout_btn']")
-    clockin_btn.click()
+    website.execute_script("""
+    var shadow_root = document.getElementById('dbox-top-bar').shadowRoot
+    $(shadow_root).find('.clockinout_btn').click();
+    """)
     
-    time.sleep(2)
+    time.sleep(4)
     
     #Signout
     website.get('https://cos.darwinbox.com' + "/user/logout")
